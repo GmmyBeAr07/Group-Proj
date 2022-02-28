@@ -1,34 +1,30 @@
 <template>
+
+<section id="Login" style="min-height: 88.7vh; min-width: 100vh; justify-content: center; flex-direction: column; display: flex;">
+
   <form @submit.prevent="login" class="form neu-border">
     <h2 class="form-heading">Login</h2>
     <input
       class="form-input neu-border-inset"
       type="email"
       v-model="email"
-      placeholder="Email"
-    />
+      placeholder="Email"/>
+
     <input
       class="form-input neu-border-inset"
       type="password"
       v-model="password"
-      placeholder="Password"
-    />
-    <button type="submit" class="form-btn neu-border">Sign in</button>
-    <!-- <div class="form-social-login">
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-google"></i>
-      </button>
-      <button class="form-btn neu-border form-social-btn">
-        <i class="fab fa-facebook-f"></i>
-      </button>
-    </div> -->
+      placeholder="Password"/>
 
     <p>
       Not a member?
       <router-link :to="{ name: 'Register' }">Create an account</router-link>
     </p>
   </form>
+</section>
 </template>
+
+
 <script>
 export default {
   data() {
@@ -62,25 +58,35 @@ export default {
   },
 };
 </script>
+
+
 <style>
+#Login {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.74)), url('../images/www.png'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    backface-visibility:visible;
+    background-size: 100% 100%;
+  }
+
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+  background: #f5f5f55e;
+  box-shadow: 8px 8px 15px #0f970a, -8px -8px 15px #ffffff8a;
 }
 .neu-border-inset {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
+  background: #f5f5f55e;
+  box-shadow: 8px 8px 15px #0f970a, -8px -8px 15px #ffffff8c;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: right;
   padding: 40px;
   gap: 20px;
-  width: 100%;
+  width: 50%;
   margin-inline: auto;
   max-width: 600px;
 }

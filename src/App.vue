@@ -24,7 +24,6 @@ export default {
 main {
   background: #f5f5f5;
   min-height: 100vh;
-  padding: 20px;
   padding-top: 100px;
 }
 #app {

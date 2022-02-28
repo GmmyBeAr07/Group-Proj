@@ -4,21 +4,23 @@
     <!-- <router-link @click="toggleNav" to="/about">About</router-link> -->
 
     <router-link @click="toggleNav" :to="{ name: 'Blogs' }">Blogs</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'CreateBlog' }"
-      >Create Blog</router-link
-    >
-    <router-link @click="logout" class="logout" :to="{ name: 'Home' }"
-      >Log out</router-link
-    >
+    <router-link @click="toggleNav" :to="{ name: 'CreateBlog' }">
+      Create Blog</router-link>
+
+    <router-link @click="logout" class="logout" :to="{ name: 'Home' }">
+      Log out</router-link>
+
     <router-link @click="toggleNav" :to="{ name: 'Login' }">Login</router-link>
-    <router-link @click="toggleNav" :to="{ name: 'Register' }"
-      >Register</router-link
-    >
+    <router-link @click="toggleNav" :to="{ name: 'Register' }">
+      Register</router-link>
   </nav>
+
   <button id="nav-btn" @click="toggleNav">
-    <i className="fas fa-bars"></i>
+    <i className="fas fa-bars">
+    </i>
   </button>
 </template>
+
 <script>
 export default {
   data() {
@@ -37,14 +39,17 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+
+
+<style lang="scss" scoped>
 #nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 15%;
   background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+  // box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
 }
 
 #nav-btn {
@@ -52,8 +57,10 @@ export default {
   top: 20px;
   right: 20px;
   background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+
+  // box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
   padding: 20px;
+
   border-radius: 50%;
   border: none;
   outline: none;
@@ -68,7 +75,7 @@ export default {
     padding: 20px;
     text-decoration: none;
     &.router-link-exact-active:not(.logout) {
-      color: #42b983;
+      color: red;
     }
   }
 }

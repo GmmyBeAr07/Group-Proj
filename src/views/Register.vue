@@ -1,4 +1,6 @@
 <template>
+<section id="Register" style="min-height: 88.6vh; min-width: 100vh; justify-content: center; flex-direction: column; display: flex;">
+
   <form @submit.prevent="register" class="form neu-border">
     <h2 class="form-heading">Register</h2>
     <input
@@ -6,29 +8,29 @@
       type="text"
       v-model="name"
       placeholder="Name"
-      required
-    />
+      required/>
+
     <input
       class="form-input neu-border-inset"
       type="email"
       v-model="email"
       placeholder="Email"
-      required
-    />
+      required/>
+
     <input
       class="form-input neu-border-inset"
       type="text"
       v-model="contact"
       placeholder="Contact Number"
-      required
-    />
+      required/>
+
     <input
       class="form-input neu-border-inset"
       type="password"
       v-model="password"
       placeholder="Password"
-      required
-    />
+      required/>
+
     <button type="submit" class="form-btn neu-border">Sign up</button>
     <!-- <div class="form-social-login">
       <button class="form-btn neu-border form-social-btn">
@@ -44,7 +46,10 @@
       <router-link :to="{ name: 'Login' }">Sign in</router-link>
     </p>
   </form>
+</section>
 </template>
+
+
 <script>
 export default {
   data() {
@@ -82,16 +87,26 @@ export default {
   },
 };
 </script>
+
+
 <style>
+#Register {
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.74)), url('../images/www2.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    backface-visibility:visible;
+    background-size: 100% 100%;
+  }
+
 .neu-border {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: 8px 8px 15px #e4e4e4, -8px -8px 15px #ffffff;
+  background: #f5f5f55e;
+  box-shadow: 8px 8px 15px #66ff00, -8px -8px 15px #ffffff9f;
 }
 .neu-border-inset {
   border-radius: 30px;
-  background: #f5f5f5;
-  box-shadow: inset 8px 8px 15px #e4e4e4, inset -8px -8px 15px #ffffff;
+  background: #f5f5f55e;
+  box-shadow: 8px 8px 15px #66ff00, -8px -8px 15px #ffffff9f;
 }
 
 .form {
